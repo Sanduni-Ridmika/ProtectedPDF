@@ -1,0 +1,11 @@
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\PolicyBookletEmail.dll.config
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\PolicyBookletEmail.dll
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\PolicyBookletEmail.pdb
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\itextsharp.dll
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\itextsharp.xml
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletView.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletView.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletView.csproj.CopyComplete
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
+C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb

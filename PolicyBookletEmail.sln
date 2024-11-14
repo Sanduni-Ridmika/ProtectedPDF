@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34114.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyBookletView", "PolicyBookletEmail\PolicyBookletView.csproj", "{549B32C5-1ABE-423F-A490-8DC52F8601D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{549B32C5-1ABE-423F-A490-8DC52F8601D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549B32C5-1ABE-423F-A490-8DC52F8601D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549B32C5-1ABE-423F-A490-8DC52F8601D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549B32C5-1ABE-423F-A490-8DC52F8601D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE0C5DF1-4250-4478-9AD9-71339FB5AD5D}
+	EndGlobalSection
+EndGlobal
