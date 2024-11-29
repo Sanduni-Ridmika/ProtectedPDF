@@ -9,3 +9,14 @@ C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmai
 C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
 C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\bin\Oracle.ManagedDataAccess.dll
 C:\Users\Administrator\Documents\IISExpress\PolicyBookletEmail\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.AssemblyReference.cache
+D:\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll.config
+D:\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll
+D:\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.pdb
+D:\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.dll
+D:\ProtectedPDF\PolicyBookletEmail\bin\Oracle.ManagedDataAccess.dll
+D:\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.xml
+D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.AssemblyReference.cache
+D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CoreCompileInputs.cache
+D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBo.699309D5.Up2Date
+D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
+D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
