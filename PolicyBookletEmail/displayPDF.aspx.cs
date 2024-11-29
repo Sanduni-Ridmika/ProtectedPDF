@@ -11,7 +11,27 @@ namespace PolicyBookletEmail
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Set dynamic content for the heading based on user authentication or other conditions
+                if (User.Identity.IsAuthenticated)
+                {
+                    // Personalize the heading if the user is authenticated
+                    litHeading.Text = "Welcome Back, " + User.Identity.Name + "!";
+                }
+                else
+                {
+                    // General heading for unauthenticated users
+                    litHeading.Text = "View Your Policy Information";
+                }
 
+                // Example: Handle query string conditions
+                string action = Request.QueryString["action"];
+                if (!string.IsNullOrEmpty(action) && action == "newPolicy")
+                {
+                    litHeading.Text = "Create a New Policy";
+                }
+            }
         }
 
         protected void btnOpenPDF_Click(object sender, EventArgs e)
