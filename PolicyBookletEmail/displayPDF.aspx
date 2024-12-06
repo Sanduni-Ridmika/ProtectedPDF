@@ -170,12 +170,12 @@
                 
                 <div class="input-group">
                     <asp:Label ID="lblPolicyNumber" runat="server" Text="Policy Number:" CssClass="label"></asp:Label>
-                    <asp:TextBox ID="txtPolicyNumber" runat="server" CssClass="inputField"></asp:TextBox>
+                    <asp:TextBox ID="txtPolicyNumber" runat="server" CssClass="inputField" placeholder="Check your email/SMS to find policy number"></asp:TextBox>
                 </div>
 
                 <div class="input-group">
                     <asp:Label ID="lblPIN" runat="server" Text="PIN:" CssClass="label"></asp:Label>
-                    <asp:TextBox ID="txtPIN" runat="server" TextMode="Password" CssClass="inputField"></asp:TextBox>
+                    <asp:TextBox ID="txtPIN" runat="server" TextMode="Password" CssClass="inputField" placeholder="Check your email/SMS to view PIN Number"></asp:TextBox>
                 </div>
             </div>
 
