@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.OracleClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Oracle.ManagedDataAccess.Client;
 
 namespace PolicyBookletEmail
 {
@@ -41,16 +44,53 @@ namespace PolicyBookletEmail
 
             if (!string.IsNullOrEmpty(policyNumber) && !string.IsNullOrEmpty(pin))
             {
-                // Pass the policy number as a query parameter to the handler
-                string url = $"PDFHandler.ashx?policyNumber={policyNumber}";
-                string script = $"window.open('{url}', '_blank');";
-                ClientScript.RegisterStartupScript(this.GetType(), "OpenPDF", script, true);
+                if (ValidatePolicyAndPin(policyNumber, pin))
+                {
+                    // Pass the policy number as a query parameter to the handler
+                    string url = $"PDFHandler.ashx?policyNumber={policyNumber}";
+                    string script = $"window.open('{url}', '_blank');";
+                    ClientScript.RegisterStartupScript(this.GetType(), "OpenPDF", script, true);
+                }
+                else
+                {
+                    lblErrorMessage.Text = "Invalid Policy Number or PIN. Please Try Again.";
+                }
             }
             else
             {
                 lblErrorMessage.Text = "Please enter both Policy Number and PIN.";
             }
 
+        }
+
+        private bool ValidatePolicyAndPin(string policyNumber, string pin)
+        {
+            bool isValid = false;
+            string connectionString = ConfigurationManager.ConnectionStrings["CONN_STRING_ORCL"].ConnectionString;
+
+            using (Oracle.ManagedDataAccess.Client.OracleConnection conn = new Oracle.ManagedDataAccess.Client.OracleConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM SMS.POLICY_EMAIL WHERE POLNO = :policyNumber AND PIN = :pin";
+
+                    using (Oracle.ManagedDataAccess.Client.OracleCommand cmd = new Oracle.ManagedDataAccess.Client.OracleCommand(query, conn))
+                    {
+                        cmd.Parameters.Add("policyNumber", Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2).Value = policyNumber;
+                        cmd.Parameters.Add("pin", Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2).Value = pin;
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        isValid = count > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblErrorMessage.Text = "An error occurred while validating your information. Please try again.";
+                }
+            }
+
+            return isValid;
         }
     }
 }
