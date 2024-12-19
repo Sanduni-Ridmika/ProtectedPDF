@@ -16,19 +16,17 @@ namespace PolicyBookletEmail
         {
             if (!IsPostBack)
             {
-                // Set dynamic content for the heading based on user authentication or other conditions
+                ScriptManager.RegisterStartupScript(this, GetType(), "ShowModal", "document.getElementById('myModal').style.display = 'flex';", true);
+
                 if (User.Identity.IsAuthenticated)
                 {
-                    // Personalize the heading if the user is authenticated
                     litHeading.Text = "Welcome Back, " + User.Identity.Name + "!";
                 }
                 else
                 {
-                    // General heading for unauthenticated users
                     litHeading.Text = "View Your Policy Information";
                 }
 
-                // Example: Handle query string conditions
                 string action = Request.QueryString["action"];
                 if (!string.IsNullOrEmpty(action) && action == "newPolicy")
                 {
@@ -37,7 +35,7 @@ namespace PolicyBookletEmail
             }
         }
 
-        protected void btnOpenPDF_Click(object sender, EventArgs e)
+        protected void btnAccess_Click(object sender, EventArgs e)
         {
             string policyNumber = txtPolicyNumber.Text.Trim();
             string pin = txtPIN.Text.Trim();
@@ -46,22 +44,36 @@ namespace PolicyBookletEmail
             {
                 if (ValidatePolicyAndPin(policyNumber, pin))
                 {
-                    // Pass the policy number as a query parameter to the handler
-                    string url = $"PDFHandler.ashx?policyNumber={policyNumber}";
-                    string script = $"window.open('{url}', '_blank');";
-                    ClientScript.RegisterStartupScript(this.GetType(), "OpenPDF", script, true);
+                    if (string.IsNullOrEmpty(policyNumber))
+                    {
+                        Response.Redirect("ErrorPage.aspx");
+                    }
+                    else
+                    {
+                        Session["PolicyNumber"] = policyNumber;
+                        Response.Redirect("/instruction.aspx");
+                    }
                 }
                 else
                 {
-                    lblErrorMessage.Text = "Invalid Policy Number or PIN. Please Try Again.";
+                    if (IsPinExpired(policyNumber, pin))
+                    {
+                        lblErrorMessage.Text = "The PIN number has expired. Please contact support.";
+                    }
+                    else
+                    {
+                        lblErrorMessage.Text = "Invalid Policy Number or PIN. Please try again.";
+                    }
                 }
             }
             else
             {
                 lblErrorMessage.Text = "Please enter both Policy Number and PIN.";
-            }
 
+            }
+            ScriptManager.RegisterStartupScript(this, GetType(), "HideModal", "document.getElementById('myModal').style.display = 'none';", true);
         }
+
 
         private bool ValidatePolicyAndPin(string policyNumber, string pin)
         {
@@ -73,7 +85,7 @@ namespace PolicyBookletEmail
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM SMS.POLICY_EMAIL WHERE POLNO = :policyNumber AND PIN = :pin";
+                    string query = "SELECT COUNT(*) FROM SMS.POLICY_EMAIL WHERE POLNO = :policyNumber AND PIN = :pin AND IS_EXPIRED = 'N'";
 
                     using (Oracle.ManagedDataAccess.Client.OracleCommand cmd = new Oracle.ManagedDataAccess.Client.OracleCommand(query, conn))
                     {
@@ -91,6 +103,39 @@ namespace PolicyBookletEmail
             }
 
             return isValid;
+        }
+
+        private bool IsPinExpired(string policyNumber, string pin)
+        {
+            bool isExpired = false;
+            string connectionString = ConfigurationManager.ConnectionStrings["CONN_STRING_ORCL"].ConnectionString;
+
+            using (Oracle.ManagedDataAccess.Client.OracleConnection conn = new Oracle.ManagedDataAccess.Client.OracleConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = @"SELECT COUNT(*) 
+                             FROM SMS.POLICY_EMAIL 
+                             WHERE POLNO = :policyNumber 
+                               AND PIN = :pin 
+                               AND IS_EXPIRED = 'Y'";
+
+                    using (Oracle.ManagedDataAccess.Client.OracleCommand cmd = new Oracle.ManagedDataAccess.Client.OracleCommand(query, conn))
+                    {
+                        cmd.Parameters.Add("policyNumber", Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2).Value = policyNumber;
+                        cmd.Parameters.Add("pin", Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2).Value = pin;
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        isExpired = count > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblErrorMessage.Text = "An error occurred while checking PIN expiration. Please try again.";
+                }
+            }
+            return isExpired;
         }
     }
 }
