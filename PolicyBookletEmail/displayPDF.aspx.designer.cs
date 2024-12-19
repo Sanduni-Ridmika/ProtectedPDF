@@ -33,15 +33,6 @@ namespace PolicyBookletEmail
         protected global::System.Web.UI.WebControls.Literal litHeading;
 
         /// <summary>
-        /// lblPolicyNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPolicyNumber;
-
-        /// <summary>
         /// txtPolicyNumber control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace PolicyBookletEmail
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPolicyNumber;
-
-        /// <summary>
-        /// lblPIN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPIN;
 
         /// <summary>
         /// txtPIN control.

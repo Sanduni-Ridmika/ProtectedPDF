@@ -20,3 +20,13 @@ D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CoreCompi
 D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBo.699309D5.Up2Date
 D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
 D:\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll.config
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.pdb
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.dll
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.xml
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CopyComplete
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
+C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
