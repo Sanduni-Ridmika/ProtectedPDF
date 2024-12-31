@@ -69,6 +69,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Image\error.png" />
     <Content Include="Image\logo.png" />
     <Content Include="instruction.aspx" />
     <Content Include="PDFHandler.ashx" />
@@ -86,6 +88,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\getPassword.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="instruction.aspx.cs">
       <DependentUpon>instruction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
