@@ -59,7 +59,7 @@
             color: #007bff;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 16px;
+            font-size: 22px;
             cursor: pointer;
         }
 

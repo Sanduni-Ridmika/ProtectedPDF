@@ -95,7 +95,8 @@ namespace PolicyBookletEmail
             else
             {
                 context.Response.ContentType = "text/plain";
-                context.Response.Write("Error: PDF file not found.");
+                //context.Response.Write("Error: PDF file not found.");
+                context.Response.Redirect("ErrorPage.aspx");
             }
 
             context.Response.Flush();

@@ -30,3 +30,14 @@ C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug
 C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CopyComplete
 C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
 C:\Users\Administrator\Desktop\PDFOpen\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll.config
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.dll
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\PolicyBookletEmail.pdb
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.dll
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\Oracle.ManagedDataAccess.dll
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\bin\itextsharp.xml
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CoreCompileInputs.cache
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.CopyComplete
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.dll
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.pdb
+D:\CustomPDF\ProtectedPDF\PolicyBookletEmail\obj\Debug\PolicyBookletEmail.csproj.AssemblyReference.cache
